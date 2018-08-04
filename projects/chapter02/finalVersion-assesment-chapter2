@@ -1,0 +1,28 @@
+Book book1 = new Book("Barnes and Kolling", "Objects First with Java", 630, true);
+book1.printDetails();
+Title: Objects First with Java
+Author: Barnes and Kolling
+Pages: 630
+Amount of times book borrowed:0
+Refnumber = ZZZ
+book1.setRefNumber("1292159049");
+book1.printDetails();
+Title: Objects First with Java
+Author: Barnes and Kolling
+Pages: 630
+Amount of times book borrowed:0
+Refnumber = 1292159049
+book1.setBorrowed();
+book1.printDetails();
+Title: Objects First with Java
+Author: Barnes and Kolling
+Pages: 630
+Amount of times book borrowed:1
+Refnumber = 1292159049
+book1.setBorrowed();
+book1.printDetails();
+Title: Objects First with Java
+Author: Barnes and Kolling
+Pages: 630
+Amount of times book borrowed:2
+Refnumber = 1292159049

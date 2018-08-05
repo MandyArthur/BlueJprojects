@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=heaterTemperature\ heaterMin\ heaterMax
+comment0.target=Heater(double,\ double,\ double)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Heater\r\n
+comment1.params=
+comment1.target=void\ warmer()
+comment1.text=\r\n\ Increase\ temp\ by\ 5\ degrees.\r\n
+comment2.params=
+comment2.target=void\ cooler()
+comment2.text=\r\n\ Decrease\ temp\ by\ 5\ degrees.\r\n
+comment3.params=increment
+comment3.target=void\ setIncrement(double)
+comment3.text=\r\n\ Sets\ increment\ value\ by\ user\ if\ intial\ increment\ value\ of\ 5.0\ not\ acceptable\r\n\ However,\ if\ negative\ value\ is\ inputted,\ the\ increment\ value\ will\ remain\ unchanged.\ \r\n\ As\ in\ negative\ value\ cannot\ be\ assigned\r\n
+numComments=4

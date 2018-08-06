@@ -54,12 +54,23 @@ public class MusicOrganizer
     public void playTrack(int index)
     {
         if(indexValid(index)) {
+            
+            stopPlaying(); //stop playing any other tracks.
             Track track = tracks.get(index);
             player.startPlaying(track.getFilename());
             System.out.println("Now playing: " + track.getArtist() + " - " + track.getTitle());
             track.incrementPlayCount(); //increase the playcount by one
         }
     }
+    
+       /**
+     * Stop the player.
+     */
+    public void stopPlaying()
+    {
+        player.stop();
+    }
+    
     
     /**
      * Return the number of tracks in the collection.
@@ -76,6 +87,7 @@ public class MusicOrganizer
      */
     public void listTrack(int index)
     {
+               
         System.out.print("Track " + index + ": ");
         Track track = tracks.get(index);
         System.out.println(track.getDetails());
@@ -128,13 +140,7 @@ public class MusicOrganizer
         }
     }
     
-    /**
-     * Stop the player.
-     */
-    public void stopPlaying()
-    {
-        player.stop();
-    }
+  
 
     /**
      * Determine whether the given index is valid for the collection.

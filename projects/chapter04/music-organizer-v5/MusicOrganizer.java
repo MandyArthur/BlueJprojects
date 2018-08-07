@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * A class to hold details of audio tracks.
@@ -29,6 +30,22 @@ public class MusicOrganizer
         System.out.println();
     }
     
+        /**
+         * Removing tracks that match title 
+         * Using string param
+         */
+        public void removeTitleMatcher(String titleToRemove)
+        {
+            Iterator<Track> it = tracks.iterator(); 
+            while(it.hasNext()){
+                Track t = it.next(); 
+                String title = t.getTitle(); 
+                if(title.equals(titleToRemove)){
+                    it.remove(); 
+                }
+        }
+        }
+        
     /**
      * Add a track file to the collection.
      * @param filename The file name of the track to be added.

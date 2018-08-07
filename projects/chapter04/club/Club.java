@@ -1,19 +1,23 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  * Store details of club memberships.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Amanda Arthur ) 
+ * @version (2018)
  */
 public class Club
 {
-    // Define any necessary fields here ...
-    
+     // An ArrayList for storing members. 
+    private ArrayList<Membership> members;
+
     /**
      * Constructor for objects of class Club
      */
     public Club()
     {
-        // Initialise any fields here ...
+        members = new ArrayList<>();
         
     }
 
@@ -21,8 +25,9 @@ public class Club
      * Add a new member to the club's list of members.
      * @param member The member object to be added.
      */
-    public void join(Membership member)
+    public void join(String member, int month, int year)
     {
+        members.add(new Membership(member, month, year));
     }
 
     /**
@@ -31,6 +36,6 @@ public class Club
      */
     public int numberOfMembers()
     {
-        return 0;
+        return members.size(); 
     }
 }

@@ -13,6 +13,31 @@ public class RandomTester
     
     private int howMany; 
     
+    /**
+     * To test getResponse quickly use this EX6.17
+     * https://stackoverflow.com/questions/6726963/random-string-from-string-array-list
+     */
+    public static String getResponse(){
+        int r = (int) (Math.random()*3);
+        String name = new String [] {"Yes","No","Maybe"}[r];
+        return name;
+    }
+    
+    /**
+     * Ex 6.18
+     */
+     public String getResponseA()
+     {
+              List<String> givenList = Arrays.asList("Yes","No","Maybe","ok", "that's bad", "Alright then...");
+            Random rand = new Random();
+            
+      
+            int randomIndex = rand.nextInt(givenList.size());
+            String randomElement = givenList.get(randomIndex);
+            
+            return randomElement; 
+        
+    }
  
     /**
      * Throw dice

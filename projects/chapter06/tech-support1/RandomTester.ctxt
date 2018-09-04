@@ -1,11 +1,17 @@
 #BlueJ class context
 comment0.params=
-comment0.target=int\ throwDice()
-comment0.text=\r\n\ Throw\ dice\r\n
+comment0.target=java.lang.String\ getResponse()
+comment0.text=\r\n\ To\ test\ getResponse\ quickly\ use\ this\ EX6.17\r\n\ https\://stackoverflow.com/questions/6726963/random-string-from-string-array-list\r\n
 comment1.params=
-comment1.target=int\ printOneRandom()
-comment1.text=\r\n\ Prints\ one\ random\ number\ \r\n\ Reference\:\ https\://www.thoughtco.com/how-to-generate-random-numbers-2034206\r\n
-comment2.params=howMany
-comment2.target=void\ multiRandNumbers(int)
-comment2.text=\r\n\ Prints\ multiple\ random\ numbers\ \r\n
-numComments=3
+comment1.target=java.lang.String\ getResponseA()
+comment1.text=\r\n\ Ex\ 6.18\r\n
+comment2.params=
+comment2.target=int\ throwDice()
+comment2.text=\r\n\ Throw\ dice\r\n
+comment3.params=
+comment3.target=int\ printOneRandom()
+comment3.text=\r\n\ Prints\ one\ random\ number\ \r\n\ Reference\:\ https\://www.thoughtco.com/how-to-generate-random-numbers-2034206\r\n
+comment4.params=howMany
+comment4.target=void\ multiRandNumbers(int)
+comment4.text=\r\n\ Prints\ multiple\ random\ numbers\ \r\n
+numComments=5

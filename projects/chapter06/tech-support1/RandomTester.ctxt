@@ -1,8 +1,11 @@
 #BlueJ class context
 comment0.params=
-comment0.target=int\ printOneRandom()
-comment0.text=\r\n\ Prints\ one\ random\ number\ \r\n\ Reference\:\ https\://www.thoughtco.com/how-to-generate-random-numbers-2034206\r\n
-comment1.params=howMany
-comment1.target=void\ multiRandNumbers(int)
-comment1.text=\r\n\ Prints\ multiple\ random\ numbers\ \r\n
-numComments=2
+comment0.target=int\ throwDice()
+comment0.text=\r\n\ Throw\ dice\r\n
+comment1.params=
+comment1.target=int\ printOneRandom()
+comment1.text=\r\n\ Prints\ one\ random\ number\ \r\n\ Reference\:\ https\://www.thoughtco.com/how-to-generate-random-numbers-2034206\r\n
+comment2.params=howMany
+comment2.target=void\ multiRandNumbers(int)
+comment2.text=\r\n\ Prints\ multiple\ random\ numbers\ \r\n
+numComments=3

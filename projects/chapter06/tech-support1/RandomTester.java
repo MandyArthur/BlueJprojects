@@ -15,6 +15,20 @@ public class RandomTester
     
  
     /**
+     * Throw dice
+     */
+    
+    public int throwDice(){
+        
+        Random Dice = new Random(); //Creating a Random object
+        int index = Dice.nextInt(5)+1 ; //simply add 1 to the result of the nextInt() method, to pick a number btn 1-6 inclusively add one to the result
+        return index; 
+        
+    }
+    
+    
+    
+    /**
      * Prints one random number 
      * Reference: https://www.thoughtco.com/how-to-generate-random-numbers-2034206
      */

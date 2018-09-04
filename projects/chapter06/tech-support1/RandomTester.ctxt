@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=int\ printOneRandom()
+comment0.text=\r\n\ Prints\ one\ random\ number\ \r\n\ Reference\:\ https\://www.thoughtco.com/how-to-generate-random-numbers-2034206\r\n
+comment1.params=howMany
+comment1.target=void\ multiRandNumbers(int)
+comment1.text=\r\n\ Prints\ multiple\ random\ numbers\ \r\n
+numComments=2

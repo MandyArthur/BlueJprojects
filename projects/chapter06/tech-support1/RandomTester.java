@@ -22,7 +22,7 @@ public class RandomTester
     {
         
         Random Generator = new Random(); //Creating a Random object
-        int index = Generator.nextInt(); //nextInt pick any number less than whatever is in the (), in tis case nothing
+        int index = Generator.nextInt(10); //nextInt pick any number less than whatever is in the (), in tis case nothing
         return index; 
     }
     
@@ -37,7 +37,7 @@ public class RandomTester
         
         if (howMany >0){ // if how many is greater than zero 
             for (c = 1; c <= howMany; c++) {
-      System.out.println("Your #" + c+ " random number: "+ MultiNumbers.nextInt()); // print this 
+      System.out.println("Your #" + c+ " random number: "+ MultiNumbers.nextInt(10)); // print this 
     }
         
 }else{ // if not

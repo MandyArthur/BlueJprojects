@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator; 
 
 /**
  * A simple model of an auction.
@@ -54,14 +55,14 @@ public class Auction
      * @param value  The value of the bid.
      */
     public void makeABid(int lotNumber, Person bidder, long value)
-    {
-        Lot selectedLot = getLot(lotNumber);
-        if(selectedLot != null) {
-            Bid bid = new Bid(bidder, value);
-            boolean successful = selectedLot.bidFor(bid);
+   {
+         Lot selectedLot = getLot(lotNumber);
+         if(selectedLot != null) {
+            boolean successful = selectedLot.bidFor(new Bid(bidder, value));
             if(successful) {
                 System.out.println("The bid for lot number " +
                                    lotNumber + " was successful.");
+                    
             }
             else {
                 // Report which bid is higher.
@@ -69,27 +70,79 @@ public class Auction
                 System.out.println("Lot number: " + lotNumber +
                                    " already has a bid of: " +
                                    highestBid.getValue());
+                  
             }
         }
     }
-
+    
     /**
-     * Return the lot with the given number. Return null
-     * if a lot with this number does not exist.
-     * @param lotNumber The number of the lot to return.
+     * Details of successful bids and usold lots
+     * at end of Auction
      */
-    public Lot getLot(int lotNumber)
-    {
-        if((lotNumber >= 1) && (lotNumber < nextLotNumber)) {
-            // The number seems to be reasonable.
-            Lot selectedLot = lots.get(lotNumber - 1);
-            // Include a confidence check to be sure we have the
+    public void close(){
+        
+        System.out.println("Closing auction.");
+        // Alert to end of auction 
+              for(Lot lot : lots) { // for every lot in Lot
+            System.out.print(lot.getNumber() + ": " + lot.getDescription()); // print their lot number and description 
+            if ( lot.getHighestBid() == null ) { // if the highest bid is 0, print no bids
+                System.out.println(" (No bids)");
+            }
+            else {
+                Bid highestBid = lot.getHighestBid(); // local variable to store the value returned from calls to the getHighestBid method 
+                System.out.println(" sold to " + highestBid.getBidder().getName() + " for " + highestBid.getValue());
+            }
+        }
+    }
+        /**
+         * Iterator version of close method
+         * 
+         */
+    public void closeIt(){
+        
+        Iterator <Lot> it = lots.iterator(); 
+        while(it.hasNext()){
+            Lot l = it.next(); 
+           // System.out.print(l.getDetails()); Stuck here! 
+        }
+    }
+        
+        /**
+         * Ex 4.49 Get Unsold Lots
+         * 
+         */
+        public ArrayList<Lot> getUnsold(){
+            
+            ArrayList<Lot> unsold = new ArrayList<Lot>();
+            for(Lot lot:lots){
+                Bid bid = lot.getHighestBid(); 
+                if (bid == null){
+                    unsold.add(lot); 
+            }
+        }
+        return unsold; 
+      }
+
+      
+   
+   /**
+      * Return the lot with the given number. Return null
+      * if a lot with this number does not exist.
+      * @param lotNumber The number of the lot to return.
+      */
+     public Lot getLot(int lotNumber)
+     {
+         if((lotNumber >= 1) && (lotNumber < nextLotNumber)) {
+             // The number seems to be reasonable.
+             Lot selectedLot = lots.get(lotNumber - 1);
+             // Include a confidence check to be sure we have the
             // right lot.
             if(selectedLot.getNumber() != lotNumber) {
                 System.out.println("Internal error: Lot number " +
                                    selectedLot.getNumber() +
                                    " was returned instead of " +
                                    lotNumber);
+              
                 // Don't return an invalid lot.
                 selectedLot = null;
             }
@@ -98,7 +151,10 @@ public class Auction
         else {
             System.out.println("Lot number: " + lotNumber +
                                " does not exist.");
+               
             return null;
         }
+
     }
 }
+

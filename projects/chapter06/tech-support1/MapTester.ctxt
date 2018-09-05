@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=name\ number
+comment0.target=void\ enterNumber(java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ Enter\ ph\ no\ and\ name\ \r\n
+comment1.params=name
+comment1.target=java.lang.String\ lookupNumber(java.lang.String)
+comment1.text=\r\n\ Get\ phone\ number\ and\ name\ \r\n
+numComments=2

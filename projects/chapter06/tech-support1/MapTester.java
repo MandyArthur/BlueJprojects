@@ -10,16 +10,16 @@ public class MapTester
 {
     // instance variables - replace the example below with your own
   
-    private HashMap<String, String> contacts; 
+   HashMap<String, String> contacts = new HashMap<String, String>(); 
 
     /**
      * Enter ph no and name 
      */
-    public enterNumber()
+    public void enterNumber(String name, String number)
     {
-       contacts = new HashMap<String, String>(); 
+       
        contacts.put(name, number); 
-       contacts.put("Rob", "0399303202"); 
+      
         
     }
     
@@ -27,7 +27,7 @@ public class MapTester
      * Get phone number and name 
      */
     
-    public String lookupNumber(String name)
+    public String lookUpNumber(String name)
     {
         String number = contacts.get(name); 
         return number; 

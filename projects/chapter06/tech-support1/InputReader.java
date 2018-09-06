@@ -1,12 +1,12 @@
-import java.util.HashSet;
 import java.util.Scanner;
 
 /**
  * InputReader reads typed text input from the standard text terminal. 
- * The text typed by a user is returned.
+ * The text typed by a user is then chopped into words, and a set of words 
+ * is provided.
  * 
  * @author     Michael Kölling and David J. Barnes
- * @version    0.1 (2016.02.29)
+ * @version    0.2 (2016.02.29)
  */
 public class InputReader
 {
@@ -26,17 +26,11 @@ public class InputReader
      *
      * @return  A String typed by the user.
      */
-    public HashSet<String> getInput()
+    public String getInput()
     {
         System.out.print("> ");         // print prompt
-        String inputLine = reader.nextLine().trim().toLowerCase();
-        
-        String[] wordArray = inputLine.split(""); 
-        HashSet<String> words = new HashSet<String>(); 
-        
-        for (String word : wordArray){
-            words.add(word);
-        }
-        return words;
+        String inputLine = reader.nextLine();
+
+        return inputLine;
     }
 }

@@ -9,7 +9,7 @@
  * leave.
  * 
  * @author     Michael Kölling and David J. Barnes
- * @version    0.1 (2016.02.29)
+ * @version    0.2 (2016.02.29)
  */
 public class SupportSystem
 {
@@ -26,9 +26,8 @@ public class SupportSystem
     }
 
     /**
-     * Start the technical support system. This will print a welcome
-     * message and enter into a dialog with the user, until the user
-     * ends the dialog.
+     * Start the technical support system. This will print a welcome message and enter
+     * into a dialog with the user, until the user ends the dialog.
      */
     public void start()
     {
@@ -37,9 +36,9 @@ public class SupportSystem
         printWelcome();
 
         while(!finished) {
-            String input = reader.getInput().trim().toLowerCase(); //trim clear whitespace from input
+            String input = reader.getInput().trim().toLowerCase();
 
-            if(input.equals("bye")) {
+            if(input.startsWith("bye")) {
                 finished = true;
             }
             else {
@@ -47,7 +46,6 @@ public class SupportSystem
                 System.out.println(response);
             }
         }
-
         printGoodbye();
     }
 
@@ -58,9 +56,9 @@ public class SupportSystem
     {
         System.out.println("Welcome to the DodgySoft Technical Support System.");
         System.out.println();
-        System.out.println("Please tell us about your problem.");
-        System.out.println("We will assist you with any problem you might have.");
-        System.out.println("Please type 'bye' to exit our system.");
+        System.out.println("Please tell us about your problem. We will assist you");
+        System.out.println("with any problem you might have. Please type 'bye'");
+        System.out.println("to exit our system.");
     }
 
     /**

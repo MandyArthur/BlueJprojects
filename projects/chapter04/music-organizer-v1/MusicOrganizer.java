@@ -37,8 +37,21 @@ public class MusicOrganizer
             }
         }
     }
-
     
+    public boolean validIndex(int index){
+                if(index < 0 || index >= files.size())
+        {
+           return false; 
+            }
+            else{
+                return true; 
+            }
+        }
+        
+    
+
+
+  
     /**
      * Add a file to the collection.
      * @param filename The file to be added.
@@ -63,7 +76,10 @@ public class MusicOrganizer
      */
     public void listFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        
+        
+        
+        if(validIndex(index)) {
             String filename = files.get(index);
             System.out.println(filename);
         }
@@ -75,7 +91,7 @@ public class MusicOrganizer
      */
     public void removeFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        if(validIndex(index)) {
             files.remove(index);
         }
     }
